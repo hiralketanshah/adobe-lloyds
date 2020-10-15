@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/llyodassets/clientlibs"/>
+    <filter root="/apps/llyodassets/components"/>
+    <filter root="/apps/llyodassets/i18n"/>
+</workspaceFilter>
