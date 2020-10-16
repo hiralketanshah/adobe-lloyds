@@ -44,6 +44,7 @@
                         <configuration>
                             <bnd><![CDATA[
 Import-Package: javax.annotation;version=0.0.0,*
+Sling-Namespaces: lbg='lbg'
                                 ]]></bnd>
                         </configuration>
                     </execution>
