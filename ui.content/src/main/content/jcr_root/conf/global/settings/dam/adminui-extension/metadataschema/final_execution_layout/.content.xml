@@ -1878,12 +1878,11 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="dam/gui/components/admin/schemafield"
                                     fieldLabel="Owner"
-                                    name="./jcr:createdBy"
-                                    readOnly="{Boolean}true"
+                                    name="./jcr:content/metadata/lbg:owner"
                                     resourceType="granite/ui/components/coral/foundation/form/textfield">
                                     <granite:data
                                         jcr:primaryType="nt:unstructured"
-                                        cq-msm-lockable="./jcr:createdBy"
+                                        cq-msm-lockable="./jcr:content/metadata/lbg:owner"
                                         metaType="text"
                                         requiredCascading="always"
                                         visibilityCascading="default"/>
