@@ -1861,7 +1861,7 @@
                 <tab6
                     granite:rel="aem-assets-metadata-form-tab"
                     jcr:primaryType="nt:unstructured"
-                    jcr:title="Final Execution Information"
+                    jcr:title="Final Execution Layout"
                     sling:resourceType="granite/ui/components/coral/foundation/container"
                     listOrder="5">
                     <granite:data
@@ -1874,6 +1874,42 @@
                             sling:resourceType="granite/ui/components/coral/foundation/container"
                             listOrder="0">
                             <items jcr:primaryType="nt:unstructured">
+                                <_x0031_603091653103
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="dam/gui/components/admin/schemafield"
+                                    fieldLabel="Final Execution Information"
+                                    resourceType="dam/gui/coral/components/admin/schemaforms/formbuilder/sectionfield">
+                                    <granite:data
+                                        jcr:primaryType="nt:unstructured"
+                                        metaType="section"/>
+                                </_x0031_603091653103>
+                                <_x0031_603092424956
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="dam/gui/components/admin/schemafield"
+                                    defaultValue=" "
+                                    fieldLabel="ID"
+                                    name="./jcr:content/metadata/lbg:id"
+                                    resourceType="granite/ui/components/coral/foundation/form/numberfield">
+                                    <granite:data
+                                        jcr:primaryType="nt:unstructured"
+                                        cq-msm-lockable="./metadata/lbg:id"
+                                        metaType="number"
+                                        requiredCascading="always"
+                                        visibilityCascading="default"/>
+                                </_x0031_603092424956>
+                                <_x0031_603089927896
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="dam/gui/components/admin/schemafield"
+                                    fieldLabel="Title"
+                                    name="./jcr:content/metadata/lbg:title"
+                                    resourceType="granite/ui/components/coral/foundation/form/textfield">
+                                    <granite:data
+                                        jcr:primaryType="nt:unstructured"
+                                        cq-msm-lockable="./jcr:content/metadata/lbg:title"
+                                        metaType="text"
+                                        requiredCascading="always"
+                                        visibilityCascading="default"/>
+                                </_x0031_603089927896>
                                 <_x0031_602754608112
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="dam/gui/components/admin/schemafield"
@@ -2556,6 +2592,70 @@
                             sling:resourceType="granite/ui/components/coral/foundation/container"
                             listOrder="1">
                             <items jcr:primaryType="nt:unstructured">
+                                <_x0031_603090085429
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="dam/gui/components/admin/schemafield"
+                                    emptyText="Select Option"
+                                    fieldLabel="Channel Category"
+                                    name="./jcr:content/metadata/lbg:channelCategory"
+                                    resourceType="dam/gui/coral/components/admin/schemaforms/formbuilder/formfields/v2/metadataselect">
+                                    <granite:data
+                                        jcr:primaryType="nt:unstructured"
+                                        choicesCascading="default"
+                                        cq-msm-lockable="./metadata/lbg:channelCategory"
+                                        metaType="dropdown"
+                                        requiredCascading="always"
+                                        visibilityCascading="default"/>
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <_x0031_603090135042
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Broadcast"
+                                            value="Broadcast"/>
+                                        <_x0031_1603090481307
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Direct Mail"
+                                            value="Direct Mail"/>
+                                        <_x0031_603090481436
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Email"
+                                            value="Email"/>
+                                        <_x0031_603090481568
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Events"
+                                            value="Events"/>
+                                        <_x0031_603090481687
+                                            jcr:primaryType="nt:unstructured"
+                                            text="In Branch"
+                                            value="In Branch"/>
+                                        <_x0031_603090481897
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Literature"
+                                            value="Literature"/>
+                                        <_x0031_603090482054
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Outdoors"
+                                            value="Outdoors"/>
+                                        <_x0031_603090482305
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Paid Digital"
+                                            value="Paid Digital"/>
+                                        <_x0031_603090539102
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Press"
+                                            value="Press"/>
+                                        <_x0031_603090542575
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Social"
+                                            value="Social"/>
+                                        <_x0031_603090543052
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Website"
+                                            value="Website"/>
+                                    </items>
+                                    <cascadeitems
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="dam/gui/coral/components/admin/schemaforms/formbuilder/cascadeitems"/>
+                                </_x0031_603090085429>
                                 <_x0031_602754972768
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="dam/gui/components/admin/schemafield"
@@ -3505,7 +3605,11 @@
                                         jcr:primaryType="nt:unstructured"
                                         cq-msm-lockable="./metadata/lbg:literatureCode"
                                         metaType="text"
-                                        requiredCascading="default"
+										cascadeRequiredFrom="./jcr:content/metadata/lbg:channelCategory"
+                                        cascadeRequiredValueSet="Literature"
+                                        cascadeVisibilityFrom="./jcr:content/metadata/lbg:channelCategory"
+                                        cascadeVisibilityValueSet="Literature"
+                                        requiredCascading="ruleBased"
                                         visibilityCascading="ruleBased"/>
                                 </_x0031_602756220547>
                                 <_x0031_602756223020
@@ -3519,8 +3623,12 @@
                                         jcr:primaryType="nt:unstructured"
                                         cq-msm-lockable="./metadata/lbg:reviewCycle"
                                         metaType="number"
-                                        requiredCascading="default"
-                                        visibilityCascading="default"/>
+										cascadeRequiredFrom="./jcr:content/metadata/lbg:channelCategory"
+                                        cascadeRequiredValueSet="Literature"
+                                        cascadeVisibilityFrom="./jcr:content/metadata/lbg:channelCategory"
+                                        cascadeVisibilityValueSet="Literature"
+                                        requiredCascading="ruleBased"
+                                        visibilityCascading="ruleBased"/>
                                 </_x0031_602756223020>
                                 <_x0031_602756225606
                                     jcr:primaryType="nt:unstructured"
@@ -3533,8 +3641,10 @@
                                         jcr:primaryType="nt:unstructured"
                                         cq-msm-lockable="./metadata/lbg:pagination"
                                         metaType="number"
-                                        requiredCascading="default"
-                                        visibilityCascading="default"/>
+                                        cascadeVisibilityFrom="./jcr:content/metadata/lbg:channelCategory"
+                                        cascadeVisibilityValueSet="Literature"
+                                        visibilityCascading="ruleBased"
+                                        requiredCascading="default"/>
                                 </_x0031_602756225606>
                                 <_x0031_602756290456
                                     jcr:primaryType="nt:unstructured"
@@ -3548,8 +3658,10 @@
                                         choicesCascading="default"
                                         cq-msm-lockable="./metadata/lbg:productStatus"
                                         metaType="dropdown"
-                                        requiredCascading="default"
-                                        visibilityCascading="default"/>
+                                        cascadeVisibilityFrom="./jcr:content/metadata/lbg:channelCategory"
+                                        cascadeVisibilityValueSet="Literature"
+                                        visibilityCascading="ruleBased"
+                                        requiredCascading="default"/>
                                     <items jcr:primaryType="nt:unstructured">
                                         <_x0031_602762456920
                                             jcr:primaryType="nt:unstructured"
@@ -3580,8 +3692,10 @@
                                         choicesCascading="default"
                                         cq-msm-lockable="./metadata/lbg:partOfPack"
                                         metaType="dropdown"
-                                        requiredCascading="default"
-                                        visibilityCascading="default"/>
+                                        cascadeVisibilityFrom="./jcr:content/metadata/lbg:channelCategory"
+                                        cascadeVisibilityValueSet="Literature"
+                                        visibilityCascading="ruleBased"
+                                        requiredCascading="default"/>
                                     <items jcr:primaryType="nt:unstructured">
                                         <_x0031_602762721011
                                             jcr:primaryType="nt:unstructured"
@@ -3609,8 +3723,10 @@
                                         choicesCascading="default"
                                         cq-msm-lockable="./metadata/lbg:fulfilmentSite"
                                         metaType="dropdown"
-                                        requiredCascading="default"
-                                        visibilityCascading="default"/>
+                                        cascadeVisibilityFrom="./jcr:content/metadata/lbg:channelCategory"
+                                        cascadeVisibilityValueSet="Literature"
+                                        visibilityCascading="ruleBased"
+                                        requiredCascading="default"/>
                                     <items jcr:primaryType="nt:unstructured">
                                         <_x0031_602762924682
                                             jcr:primaryType="nt:unstructured"
@@ -3689,8 +3805,10 @@
                                         choicesCascading="default"
                                         cq-msm-lockable="./metadata/lbg:language"
                                         metaType="dropdown"
-                                        requiredCascading="default"
-                                        visibilityCascading="default"/>
+                                        cascadeVisibilityFrom="./jcr:content/metadata/lbg:channelCategory"
+                                        cascadeVisibilityValueSet="Literature"
+                                        visibilityCascading="ruleBased"
+                                        requiredCascading="default"/>
                                     <items jcr:primaryType="nt:unstructured">
                                         <_x0031_602823366524
                                             jcr:primaryType="nt:unstructured"
