@@ -1879,11 +1879,11 @@
                                     sling:resourceType="dam/gui/components/admin/schemafield"
                                     defaultValue=" "
                                     fieldLabel="ID"
-                                    name="./jcr:content/metadata/id"
+                                    name="./jcr:content/metadata/lbg:id"
                                     resourceType="granite/ui/components/coral/foundation/form/numberfield">
                                     <granite:data
                                         jcr:primaryType="nt:unstructured"
-                                        cq-msm-lockable="./metadata/id"
+                                        cq-msm-lockable="./metadata/lbg:id"
                                         metaType="number"
                                         requiredCascading="always"
                                         visibilityCascading="default"/>
@@ -1905,14 +1905,13 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="dam/gui/components/admin/schemafield"
                                     fieldLabel="Owner"
-                                    name="./jcr:createdBy"
-                                    readOnly="{Boolean}true"
+                                    name="./jcr:content/metadata/lbg:owner"
                                     resourceType="granite/ui/components/coral/foundation/form/textfield">
                                     <granite:data
                                         jcr:primaryType="nt:unstructured"
-                                        cq-msm-lockable="./jcr:createdBy"
+                                        cq-msm-lockable="./metadata/lbg:owner"
                                         metaType="text"
-                                        requiredCascading="default"
+                                        requiredCascading="always"
                                         visibilityCascading="default"/>
                                 </_x0031_602855799075>
                                 <_x0031_602672640829
