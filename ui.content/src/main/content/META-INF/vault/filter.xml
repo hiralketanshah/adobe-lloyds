@@ -3,6 +3,6 @@
     <filter root="/conf/llyodassets" mode="merge"/>
     <filter root="/content/llyodassets" mode="merge"/>
     <filter root="/content/dam/llyodassets" mode="merge"/>
-	<filter root="/content/dam" mode="merge"/>
+	<filter root="/content/dam/llyod-assets-sample" mode="replace"/>
     <filter root="/content/experience-fragments/llyodassets" mode="merge"/>
 </workspaceFilter>
