@@ -1,0 +1,51 @@
+- DEF groupPath="/home/groups/lloyds"
+
+- group_config:
+
+    - admin-group:
+
+        - name: 'Admin Group'
+          isMemberOf: tag-administrators
+          path: ${groupPath}
+
+    - internal-agency:
+
+        - name: 'Internal Agency'
+          isMemberOf: tag-administrators
+          path: ${groupPath}
+
+    - media-agency:
+
+        - name: 'Media Agency'
+          isMemberOf: tag-administrators
+          path: ${groupPath}
+
+    - brand-agency:
+
+        - name: 'Brand Agency'
+          isMemberOf: tag-administrators
+          path: ${groupPath}
+
+    - cco:
+
+        - name: 'CCO'
+          isMemberOf: tag-administrators
+          path: ${groupPath}
+
+    - lbg:
+
+        - name: 'LBG'
+          isMemberOf: tag-administrators
+          path: ${groupPath}
+
+    - external-agencies:
+
+        - name: 'External Agencies'
+          isMemberOf: tag-administrators
+          path: ${groupPath}
+
+    - sensitive-access:
+
+        - name: 'Sensitive Access'
+          isMemberOf: tag-administrators
+          path: ${groupPath}
