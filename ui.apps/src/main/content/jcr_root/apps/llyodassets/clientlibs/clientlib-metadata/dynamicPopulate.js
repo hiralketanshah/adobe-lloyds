@@ -5,9 +5,8 @@
 
     function populateValues(){
 		//Arrays of values which contain values that are to be preserved
-		var agency=['101 London','Agency','Alpha Grid','Anomaly','Blue State Digital','Bridgeman','Brightsource (Cello)','Channel Graphics Communication ltd','D8','Edge','Editions','EG+','Greenhouse GroupM','Ink Copywriters Ltd','Immedia broadcast Ltd','Milestone','Occam (Amaze One)','Other','Pop eye','Proximity London','Qumu (Kulu Valley)','Rainey Kelly','TAG Europe','Tangible UK (Cello)','TGAC Holdings Ltd','The Point Organisation Ltd','The Union','TRA','Xerox Corporation','Zone','Zone Digital']
-		var brand=['Bank of Wales','Cheltenham & Gloucester','CIM - Verde','GI - 3rd Parties','Lloyds TSB - Do not use','Lloyds TSB International - Do not use','Lloyds TSB Islands Retail - Do not use','Lloyds TSB Offshore Corporate - Do not use','Lloyds TSB Private Banking - Do not use','Lloyds TSB Wealth Management - Do not use','Your Marketing Design Authority','TSB','Historic']
-		var product = ['Insurance','iWeb','Wealth']
+		var agency=['101 London','Agency','Alpha Grid','Anomaly','Blue State Digital','Bridgeman','Brightsource (Cello)','Channel Graphics Communication ltd','D8','Edge','Editions','EG+','Greenhouse GroupM','Ink Copywriters Ltd','Immedia broadcast Ltd','Milestone','Occam (Amaze One)','Other','Pop eye','Qumu (Kulu Valley)','Rainey Kelly','TAG Europe','Tangible UK (Cello)','TGAC Holdings Ltd','The Point Organisation Ltd','The Union','TRA','Xerox Corporation','Zone','Zone Digital']
+		var brand=['Bank of Wales','Cheltenham & Gloucester','CIM - Verde','GI - 3rd Parties','Lloyds TSB - Do not use','Lloyds TSB International - Do not use','Lloyds TSB Islands Retail - Do not use','Lloyds TSB Offshore Corporate - Do not use','Lloyds TSB Private Banking - Do not use','Lloyds TSB Wealth Management - Do not use','Your Marketing Design Authority','Historic']
 		var deliverableType=['Direct Mail','In Branch','Literature','Other','Paid Digital','Website']
 
 		
@@ -17,7 +16,7 @@
 			$.getJSON(pathofMetadata, function (data) {
 			   
 				$.each(data, function (index, value) {
-				   if(index == "agency")
+                    if(index == "lbg:agency")
 					{
 						agency.forEach( function( agencyValue ) {
 							var values = value.split(',');
@@ -39,15 +38,7 @@
 
 						})
 					}
-					else  if(index == "product")
-					{
-						value.forEach( function (lbgProductValue){
-							 if(product.includes(lbgProductValue)){
-								$("coral-select[name='./jcr:content/metadata/lbg:product']").append('<coral-select-item value="'+lbgProductValue+'" trackingelement="" selected="">'+lbgProductValue+'</coral-select-item>')
-							}
-						})
-					}
-					else  if(index == "deliverableType")
+                    else  if(index == "lbg:deliverableType")
 					{
 
 							 deliverableType.forEach( function( lbgDeliverableType ) {
