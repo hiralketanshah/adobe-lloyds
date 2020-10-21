@@ -76,6 +76,12 @@
                         </embedded>
                         <embedded>
                             <groupId>com.lloyds.assets</groupId>
+                            <artifactId>lloyds-assets.acl</artifactId>
+                            <type>zip</type>
+                            <target>/apps/llyodassets-packages/content/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.lloyds.assets</groupId>
                             <artifactId>lloyds-assets.ui.config</artifactId>
                             <type>zip</type>
                             <target>/apps/llyodassets-packages/application/install</target>
@@ -97,7 +103,20 @@
                             <type>zip</type>
                             <target>/apps/llyodassets-vendor-packages/application/install</target>
                         </embedded>
+                        <embedded>
+                        	<groupId>biz.netcentric.cq.tools.accesscontroltool</groupId>
+                        	<artifactId>accesscontroltool-oakindex-package</artifactId>
+                        	<type>zip</type>
+                        	<target>/apps/llyodassets-vendor-packages/application/install</target>
+                        </embedded>
                     </embeddeds>
+                    <subPackages>
+                        <subPackage>
+                        	<groupId>biz.netcentric.cq.tools.accesscontroltool</groupId>
+                        	<artifactId>accesscontroltool-package</artifactId>
+                        	<filter>true</filter>
+                        </subPackage>
+                    </subPackages>
                 </configuration>
             </plugin>
             <plugin>
@@ -204,6 +223,18 @@
             <version>${project.version}</version>
             <type>zip</type>
         </dependency>
+		
+		<!-- Netcentric ACL Tool -->
+		<dependency>
+			<groupId>biz.netcentric.cq.tools.accesscontroltool</groupId>
+	        <artifactId>accesscontroltool-package</artifactId>
+	        <type>content-package</type>
+		</dependency>
+ 		<dependency>
+		    <groupId>biz.netcentric.cq.tools.accesscontroltool</groupId>
+		    <artifactId>accesscontroltool-oakindex-package</artifactId>
+		    <type>zip</type>
+		</dependency>
 
         <dependency>
             <groupId>com.adobe.cq</groupId>

@@ -32,6 +32,7 @@
         <module>ui.config</module>
         <module>ui.content</module>
         <module>dispatcher</module>
+		<module>acl</module>
     </modules>
 
     <properties>
@@ -45,6 +46,7 @@
         <vault.password>admin</vault.password>
         <core.wcm.components.version>2.11.0</core.wcm.components.version>
         <bnd.version>5.1.2</bnd.version>
+        <biz.netcentric.cq.tools.accesscontroltool.version>2.5.3</biz.netcentric.cq.tools.accesscontroltool.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <componentGroupName>Llyod Assets</componentGroupName>
@@ -738,6 +740,20 @@ Bundle-DocURL:
                 <version>1.0.1</version>
                 <scope>test</scope>
             </dependency>
+			<!-- Netcentric ACL Tool -->
+			<dependency>
+				<groupId>biz.netcentric.cq.tools.accesscontroltool</groupId>
+		        <artifactId>accesscontroltool-package</artifactId>
+		        <type>content-package</type>
+		        <version>${biz.netcentric.cq.tools.accesscontroltool.version}</version>
+			</dependency>
+			<!-- Oak Index for netcentric ACL Tool -->
+ 			<dependency>
+			    <groupId>biz.netcentric.cq.tools.accesscontroltool</groupId>
+			    <artifactId>accesscontroltool-oakindex-package</artifactId>
+			    <type>zip</type>
+			    <version>${biz.netcentric.cq.tools.accesscontroltool.version}</version>
+			</dependency>
         </dependencies>
     </dependencyManagement>
 

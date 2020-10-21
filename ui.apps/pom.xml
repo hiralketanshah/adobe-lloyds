@@ -161,6 +161,17 @@
             <groupId>com.day.cq.wcm</groupId>
             <artifactId>cq-wcm-taglib</artifactId>
         </dependency>
+		
+		<dependency>
+		<groupId>biz.netcentric.cq.tools.accesscontroltool</groupId>
+		<artifactId>accesscontroltool-package</artifactId>
+		<type>content-package</type>
+		</dependency>
+		<dependency>
+		  <groupId>biz.netcentric.cq.tools.accesscontroltool</groupId>
+		  <artifactId>accesscontroltool-oakindex-package</artifactId>
+		  <type>zip</type>
+		</dependency>
 
         <!-- HTL dependencies needed for the HTL Maven Plugin source code generation -->
         <dependency>
