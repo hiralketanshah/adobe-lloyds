@@ -5,5 +5,8 @@
     <jcr:content
         jcr:primaryType="nt:unstructured"
         jcr:title="Assets"
-        sourcing="false"/>
+        metadataSchema="/conf/global/settings/dam/adminui-extension/metadataschema/asset_layout"
+        sourcing="false">
+        <folderThumbnail/>
+    </jcr:content>
 </jcr:root>
