@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:ACL">
+    <allow
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="mac-default-fonts-owner"
+        rep:privileges="{Name}[jcr:removeChildNodes]"/>
+    <allow1
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="mac-default-icons-owner"
+        rep:privileges="{Name}[jcr:removeChildNodes]"/>
+</jcr:root>
