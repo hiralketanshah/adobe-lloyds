@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
     <filter root="/conf/llyodassets" mode="merge"/>
-    <filter root="/conf/global/settings/dam/adminui-extension/metadataschema/final_execution_layout"/>
+	<filter root="/conf/global/settings/dam/adminui-extension/metadataschema/final_execution_layout"/>
+	<filter root="/conf/global/settings/dam/adminui-extension/metadataschema/asset_layout"/>
     <filter root="/content/llyodassets" mode="merge"/>
     <filter root="/content/dam/llyodassets" mode="merge"/>
     <filter root="/content/experience-fragments/llyodassets" mode="merge"/>
