@@ -70,10 +70,12 @@
           permission: allow
           actions: read
 
-        - path: /content/dam/${parent}
-          permission: allow
-          privileges: jcr:read
-          repGlob: ''
+        - FOR parent IN ${parents}:
+
+            - path: /content/dam/${parent}
+              permission: allow
+              privileges: jcr:read
+              repGlob: ''
 
     - admin-group:
 
@@ -97,12 +99,22 @@
 
             - path: /content/dam/${parent}/assets
               permission: allow
+              privileges: jcr:read
+              repGlob: ''
+
+            - path: /content/dam/${parent}/assets
+              permission: allow
               actions: read, modify, create
               repGlob: /*
 
             - path: /content/dam/${parent}/assets/media-files
               permission: deny
               actions: create,modify
+
+            - path: /content/dam/${parent}/final-executions
+              permission: allow
+              privileges: jcr:read
+              repGlob: ''
 
             - path: /content/dam/${parent}/final-executions/production-ready
               permission: allow
