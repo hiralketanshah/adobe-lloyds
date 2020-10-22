@@ -1,0 +1,18 @@
+ -------------------------------------------------------------------------------------
+ Time: ${time}
+ -------------------------------------------------------------------------------------
+
+ Hi ${inviteeFirstName}, 
+
+ Some of your assets have expired. Please check and take necessary actions.
+
+ ${assetpaths} 
+
+ Goto ${assetlink} for more details. 
+
+ Thanks, 
+ ${hostUserFullName} 
+ 
+ 
+ -------------------------------------------------------------------------------------
+ This is an automatically generated message. Please do not reply.
