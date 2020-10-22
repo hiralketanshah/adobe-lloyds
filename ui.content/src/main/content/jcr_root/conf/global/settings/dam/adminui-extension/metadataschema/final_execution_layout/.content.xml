@@ -3215,10 +3215,6 @@
                                             jcr:primaryType="nt:unstructured"
                                             text="Large Corporate (LC)"
                                             value="Large Corporate (LC)"/>
-                                        <_x0031_602761910176
-                                            jcr:primaryType="nt:unstructured"
-                                            text="Mid Market"
-                                            value="Mid Market"/>
                                         <_x0031_602761911388
                                             jcr:primaryType="nt:unstructured"
                                             text="Mid-Market (MM)"

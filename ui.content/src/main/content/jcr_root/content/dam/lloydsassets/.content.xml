@@ -4,8 +4,5 @@
     <jcr:content
         cq:conf="/conf/llyodassets"
         jcr:primaryType="nt:unstructured"
-        jcr:title="Llyod Assets">
-        <folderThumbnail/>
-    </jcr:content>
-    <asset.jpg/>
+        jcr:title="Lloyds Assets"/>
 </jcr:root>
