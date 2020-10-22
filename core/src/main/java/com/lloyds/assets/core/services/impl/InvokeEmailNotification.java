@@ -12,9 +12,7 @@ import org.apache.commons.lang.text.StrLookup;
 import org.apache.commons.mail.Email;
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.HtmlEmail;
-import org.apache.commons.mail.SimpleEmail;
 import org.apache.jackrabbit.api.security.user.Authorizable;
-import org.apache.jackrabbit.api.security.user.Group;
 import org.apache.jackrabbit.api.security.user.UserManager;
 import org.apache.sling.api.resource.LoginException;
 import org.apache.sling.api.resource.Resource;
@@ -40,7 +38,6 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
@@ -92,23 +89,23 @@ public class InvokeEmailNotification implements EventHandler {
     log.info("Entry :: handleEvent() method .......");
 
     try {
-      ResourceResolver notificationResolver = AssetsHelper.getResourceResolver(resourceResolverFactory);
+      ResourceResolver resourceResolver = AssetsHelper.getResourceResolver(resourceResolverFactory);
       // Avoid processing if not a task event
       String topic = event.getTopic();
       if (TaskEvent.TOPIC.equals(topic) && StringUtils
           .equals(event.getProperty("TaskTypeName").toString(), NOTIFICATION)) {
         String taskId = event.getProperty("TaskId").toString();
-        Resource taskRes = notificationResolver.getResource("/var/taskmanagement/tasks/" + taskId);
+        Resource taskRes = resourceResolver.getResource("/var/taskmanagement/tasks/" + taskId);
         if (null != taskRes) {
           if (StringUtils.contains(taskId, "assets_about_to_expire")) {
             log.info("Send email notification for Assets is Expiring");
-            sendEmailNotification("ASSET_EXPIRY_PRIOR", notificationResolver, taskRes);
+            sendEmailNotification("ASSET_EXPIRY_PRIOR", resourceResolver, taskRes);
           } else if (StringUtils.contains(taskId, "assets_expired")) {
             log.info("Send email notification for Expired assets");
-            sendEmailNotification("ASSET_EXPIRY", notificationResolver, taskRes);
+            sendEmailNotification("ASSET_EXPIRY", resourceResolver, taskRes);
           } else if (StringUtils.contains(taskId, "subassets_expired")) {
             log.info("Send email notification for Expired subassets");
-            sendEmailNotification("SUBASSET_EXPIRY", notificationResolver, taskRes);
+            sendEmailNotification("SUBASSET_EXPIRY", resourceResolver, taskRes);
           }
         }
       } else {
@@ -120,6 +117,7 @@ public class InvokeEmailNotification implements EventHandler {
       log.error("Unable to send the mail event due to {} " , e.getMessage() , e);
     }
   }
+
   @Activate
   @Modified
   protected void activate(InvokeEmailNotification.Configuration schedulerConfiguration) {
