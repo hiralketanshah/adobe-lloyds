@@ -7,6 +7,5 @@
         jcr:primaryType="nt:unstructured"
         jcr:title="Scottish Widows"
         sourcing="false">
-        <folderThumbnail/>
     </jcr:content>
 </jcr:root>

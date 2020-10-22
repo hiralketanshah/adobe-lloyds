@@ -9,6 +9,5 @@
         jcr:title="Final Executions"
         metadataSchema="/conf/global/settings/dam/adminui-extension/metadataschema/final_execution_layout"
         sourcing="false">
-        <folderThumbnail/>
     </jcr:content>
 </jcr:root>

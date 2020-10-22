@@ -11,6 +11,5 @@
         jcr:primaryType="nt:unstructured"
         jcr:title="Production Ready"
         sourcing="false">
-        <folderThumbnail/>
     </jcr:content>
 </jcr:root>

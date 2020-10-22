@@ -9,6 +9,5 @@
         jcr:title="Assets"
         metadataSchema="/conf/global/settings/dam/adminui-extension/metadataschema/asset_layout"
         sourcing="false">
-        <folderThumbnail/>
     </jcr:content>
 </jcr:root>
