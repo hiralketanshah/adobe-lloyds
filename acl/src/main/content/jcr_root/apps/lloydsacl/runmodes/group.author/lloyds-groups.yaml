@@ -61,7 +61,7 @@
 
     - internal-group:
 
-        - path: /content/dam/llyodassets
+        - path: /content/dam/lloydsassets
           permission: deny
           actions: read, modify, create , delete, replicate
           repGlob: /*
@@ -72,7 +72,7 @@
 
         - FOR parent IN ${parents}:
 
-            - path: /content/dam/llyodassets/${parent}
+            - path: /content/dam/lloydsassets/${parent}
               permission: allow
               privileges: jcr:read
               repGlob: ''
@@ -81,46 +81,46 @@
 
         - FOR parent IN ${parents}:
 
-            - path: /content/dam/llyodassets/${parent}/final-executions/approved
+            - path: /content/dam/lloydsassets/${parent}/final-executions/approved
               permission: allow
               actions: read,create,modify
 
     - internal-agency:
 
-        - path: /content/dam/llyodassets/hhg-uncategorised
+        - path: /content/dam/lloydsassets/hhg-uncategorised
           permission: allow
           actions: read,create,modify
 
-        - path: /content/dam/llyodassets/mediabin-uncategorised
+        - path: /content/dam/lloydsassets/mediabin-uncategorised
           permission: allow
           actions: read,create,modify
 
         - FOR parent IN ${parents}:
 
-            - path: /content/dam/llyodassets/${parent}/assets
+            - path: /content/dam/lloydsassets/${parent}/assets
               permission: allow
               privileges: jcr:read
               repGlob: ''
 
-            - path: /content/dam/llyodassets/${parent}/assets
+            - path: /content/dam/lloydsassets/${parent}/assets
               permission: allow
               actions: read, modify, create
               repGlob: /*
 
-            - path: /content/dam/llyodassets/${parent}/assets/media-files
+            - path: /content/dam/lloydsassets/${parent}/assets/media-files
               permission: deny
               actions: create,modify
 
-            - path: /content/dam/llyodassets/${parent}/final-executions
+            - path: /content/dam/lloydsassets/${parent}/final-executions
               permission: allow
               privileges: jcr:read
               repGlob: ''
 
-            - path: /content/dam/llyodassets/${parent}/final-executions/production-ready
+            - path: /content/dam/lloydsassets/${parent}/final-executions/production-ready
               permission: allow
               actions: read,create,modify
 
-            - path: /content/dam/llyodassets/${parent}/final-executions/work-in-progress
+            - path: /content/dam/lloydsassets/${parent}/final-executions/work-in-progress
               permission: allow
               actions: read,create,modify
 
@@ -128,12 +128,12 @@
 
         - FOR parent IN ${parents}:
 
-            - path: /content/dam/llyodassets/${parent}/assets
+            - path: /content/dam/lloydsassets/${parent}/assets
               permission: allow
               privileges: jcr:read
               repGlob: ''
 
-            - path: /content/dam/llyodassets/${parent}/assets/media-files
+            - path: /content/dam/lloydsassets/${parent}/assets/media-files
               permission: allow
               actions: read,create,modify
 
@@ -141,12 +141,12 @@
 
         - FOR parent IN ${parents}:
 
-            - path: /content/dam/llyodassets/${parent}/assets
+            - path: /content/dam/lloydsassets/${parent}/assets
               permission: allow
               privileges: jcr:read
               repGlob: ''
 
-            - path: /content/dam/llyodassets/${parent}/assets/brand-guidelines
+            - path: /content/dam/lloydsassets/${parent}/assets/brand-guidelines
               permission: allow
               actions: read,create,modify
 
@@ -154,19 +154,19 @@
 
         - FOR parent IN ${parents}:
 
-            - path: /content/dam/llyodassets/${parent}/assets
+            - path: /content/dam/lloydsassets/${parent}/assets
               permission: allow
               actions: read
 
-            - path: /content/dam/llyodassets/${parent}/final-executions
+            - path: /content/dam/lloydsassets/${parent}/final-executions
               permission: allow
               actions: read
 
-            - path: /content/dam/llyodassets/${parent}/assets/design-files
+            - path: /content/dam/lloydsassets/${parent}/assets/design-files
               permission: deny
               actions: read
 
-            - path: /content/dam/llyodassets/${parent}/assets/fonts
+            - path: /content/dam/lloydsassets/${parent}/assets/fonts
               permission: deny
               actions: read
 
@@ -174,15 +174,15 @@
 
         - FOR parent IN ${parents}:
 
-            - path: /content/dam/llyodassets/${parent}/assets
+            - path: /content/dam/lloydsassets/${parent}/assets
               permission: allow
               actions: read
 
-            - path: /content/dam/llyodassets/${parent}/assets/design-files
+            - path: /content/dam/lloydsassets/${parent}/assets/design-files
               permission: deny
               actions: read
 
-            - path: /content/dam/llyodassets/${parent}/assets/fonts
+            - path: /content/dam/lloydsassets/${parent}/assets/fonts
               permission: deny
               actions: read
 
@@ -190,15 +190,15 @@
 
         - FOR parent IN ${parents}:
 
-            - path: /content/dam/llyodassets/${parent}/assets
+            - path: /content/dam/lloydsassets/${parent}/assets
               permission: allow
               actions: read
 
-            - path: /content/dam/llyodassets/${parent}/assets/design-files
+            - path: /content/dam/lloydsassets/${parent}/assets/design-files
               permission: deny
               actions: read
 
-            - path: /content/dam/llyodassets/${parent}/assets/fonts
+            - path: /content/dam/lloydsassets/${parent}/assets/fonts
               permission: deny
               actions: read
 
@@ -206,11 +206,11 @@
 
         - FOR parent IN ${parents}:
 
-            - path: /content/dam/llyodassets/${parent}/assets
+            - path: /content/dam/lloydsassets/${parent}/assets
               permission: allow
               privileges: jcr:read
               repGlob: ''
 
-            - path: /content/dam/llyodassets/${parent}/assets/signatures
+            - path: /content/dam/lloydsassets/${parent}/assets/signatures
               permission: allow
               actions: read,create,modify

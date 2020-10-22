@@ -3114,10 +3114,6 @@
                                             jcr:primaryType="nt:unstructured"
                                             text="Sticky Content"
                                             value="Sticky Content"/>
-                                        <_x0031_602761754504
-                                            jcr:primaryType="nt:unstructured"
-                                            text="Tealium"
-                                            value="Tealium"/>
                                     </items>
                                     <cascadeitems
                                         jcr:primaryType="nt:unstructured"
