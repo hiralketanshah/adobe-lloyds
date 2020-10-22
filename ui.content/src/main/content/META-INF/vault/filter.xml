@@ -5,6 +5,6 @@
 	<filter root="/conf/global/settings/dam/adminui-extension/metadataschema/asset_layout"/>
     <filter root="/content/llyodassets" mode="merge"/>
     <filter root="/content/dam/llyodassets" mode="merge"/>
-	<filter root="/content/dam/llyod-assets-sample" mode="replace"/>
+	<filter root="/content/dam/llyod-assets-sample-structure" mode="replace"/>
     <filter root="/content/experience-fragments/llyodassets" mode="merge"/>
 </workspaceFilter>
