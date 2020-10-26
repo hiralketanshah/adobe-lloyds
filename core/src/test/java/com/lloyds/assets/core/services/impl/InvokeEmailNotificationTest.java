@@ -76,7 +76,7 @@ public class InvokeEmailNotificationTest {
   Authorizable authorizable;
 
   @Mock
-  Value value ;
+  Value value;
 
   @Mock
   Externalizer externalizerMock;
@@ -89,7 +89,7 @@ public class InvokeEmailNotificationTest {
     MockitoAnnotations.initMocks(this);
     FieldSetter.setField(invokeEmailNotification, invokeEmailNotification.getClass().getDeclaredField("groupName"), "test");
 
-    Value[] values = new Value[1]{value};
+    Value[] values = new Value[]{value};
     context.registerService(ResourceResolverFactory.class, resolverFactory);
     when(resolverFactory.getServiceResourceResolver(org.mockito.ArgumentMatchers.anyMap()))
         .thenReturn(resourceResolver);
