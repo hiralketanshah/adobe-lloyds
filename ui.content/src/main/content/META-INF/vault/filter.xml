@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/lloydsbankplcassets" mode="merge"/>
+    <filter root="/content/lloydsbankplcassets" mode="merge"/>
+    <filter root="/content/dam/lloydsbankplcassets" mode="merge"/>
+    <filter root="/content/experience-fragments/lloydsbankplcassets" mode="merge"/>
+</workspaceFilter>
