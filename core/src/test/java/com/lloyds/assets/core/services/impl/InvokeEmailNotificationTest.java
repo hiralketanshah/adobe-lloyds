@@ -26,6 +26,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
+import org.mockito.internal.util.reflection.FieldSetter;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.osgi.service.event.Event;
 
@@ -74,23 +75,33 @@ public class InvokeEmailNotificationTest {
   @Mock
   Authorizable authorizable;
 
-   Externalizer externalizerMock;
+  @Mock
+  Value value ;
+
+  @Mock
+  Externalizer externalizerMock;
+
+  @Mock
   MessageGatewayService messageGatewayServiceMock;
 
   @BeforeEach
   void setUp() throws Exception {
     MockitoAnnotations.initMocks(this);
+    FieldSetter.setField(invokeEmailNotification, invokeEmailNotification.getClass().getDeclaredField("groupName"), "test");
+
+    Value[] values = new Value[1]{value};
     context.registerService(ResourceResolverFactory.class, resolverFactory);
     when(resolverFactory.getServiceResourceResolver(org.mockito.ArgumentMatchers.anyMap()))
         .thenReturn(resourceResolver);
     when(resolverFactory.getServiceResourceResolver(Mockito.anyMap())).thenReturn(resourceResolver);
     when(resourceResolver.getResource(Mockito.any(String.class))).thenReturn(resource);
     when(resourceResolver.adaptTo(UserManager.class)).thenReturn(userManager);
-    when(resource.getPath()).thenReturn("templatePath");
-
     when(userManager.getAuthorizable(Mockito.anyString())).thenReturn(authorizable);
+    when(resource.getPath()).thenReturn("templatePath");
     when(authorizable.isGroup()).thenReturn(true);
-    when(authorizable.hasProperty(Mockito.anyString())).thenReturn(false);
+    when(authorizable.hasProperty(Mockito.anyString())).thenReturn(true);
+    when(authorizable.getProperty(Mockito.anyString())).thenReturn(values);
+    when(value.getString()).thenReturn("test");
 
 
 
