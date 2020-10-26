@@ -2383,7 +2383,7 @@
                                             jcr:primaryType="nt:unstructured"
                                             text="Oakley Wilkinson Bryan"
                                             value="Oakley Wilkinson Bryan"/>
-										<_x0031_603372400426
+                                        <_x0031_603372400426
                                             jcr:primaryType="nt:unstructured"
                                             text="Pixel"
                                             value="Pixel"/>
@@ -2443,12 +2443,14 @@
                                     resourceType="dam/gui/coral/components/admin/schemaforms/formbuilder/formfields/v2/metadataselect">
                                     <granite:data
                                         jcr:primaryType="nt:unstructured"
+                                        cascadeRequiredFrom="./jcr:content/metadata/lbg:businessArea"
+                                        cascadeRequiredValueSet="Commercial Banking"
                                         cascadeVisibilityFrom="./jcr:content/metadata/lbg:businessArea"
                                         cascadeVisibilityValueSet="Commercial Banking"
                                         choicesCascading="default"
                                         cq-msm-lockable="./metadata/lbg:commercialArea"
                                         metaType="dropdown"
-                                        requiredCascading="always"
+                                        requiredCascading="ruleBased"
                                         visibilityCascading="ruleBased"/>
                                     <items jcr:primaryType="nt:unstructured">
                                         <_x0031_602825381670
@@ -2462,7 +2464,7 @@
                                         <_x0031_602825382044
                                             jcr:primaryType="nt:unstructured"
                                             text="Large Corporate (LC)"
-                                            value="Large Corporate (LC)"/>                                        
+                                            value="Large Corporate (LC)"/>
                                         <_x0031_602825382411
                                             jcr:primaryType="nt:unstructured"
                                             text="Mid-Market (MM)"
@@ -2494,12 +2496,14 @@
                                     resourceType="dam/gui/coral/components/admin/schemaforms/formbuilder/formfields/v2/metadataselect">
                                     <granite:data
                                         jcr:primaryType="nt:unstructured"
+                                        cascadeRequiredFrom="./jcr:content/metadata/lbg:businessArea"
+                                        cascadeRequiredValueSet="International Wealth"
                                         cascadeVisibilityFrom="./jcr:content/metadata/lbg:businessArea"
                                         cascadeVisibilityValueSet="International Wealth"
                                         choicesCascading="default"
                                         cq-msm-lockable="./metadata/lbg:internationalWealthArea"
                                         metaType="dropdown"
-                                        requiredCascading="always"
+                                        requiredCascading="ruleBased"
                                         visibilityCascading="ruleBased"/>
                                     <items jcr:primaryType="nt:unstructured">
                                         <_x0031_602739304339
@@ -2533,12 +2537,14 @@
                                     resourceType="dam/gui/coral/components/admin/schemaforms/formbuilder/formfields/v2/metadataselect">
                                     <granite:data
                                         jcr:primaryType="nt:unstructured"
+                                        cascadeRequiredFrom="./jcr:content/metadata/lbg:businessArea"
+                                        cascadeRequiredValueSet="UK Wealth"
                                         cascadeVisibilityFrom="./jcr:content/metadata/lbg:businessArea"
                                         cascadeVisibilityValueSet="UK Wealth"
                                         choicesCascading="default"
                                         cq-msm-lockable="./metadata/lbg:ukWealthArea"
                                         metaType="dropdown"
-                                        requiredCascading="always"
+                                        requiredCascading="ruleBased"
                                         visibilityCascading="ruleBased"/>
                                     <items jcr:primaryType="nt:unstructured">
                                         <_x0031_602739355632
@@ -2592,16 +2598,18 @@
                                     sling:resourceType="dam/gui/components/admin/schemafield"
                                     displayedFormat="YYYY-MM-DD HH:mm"
                                     fieldLabel="Withdrawal Date"
-                                    name="./jcr:content/metadata/lbg:withdrawalDate1"
+                                    name="./jcr:content/metadata/lbg:withdrawalDate"
                                     resourceType="granite/ui/components/coral/foundation/form/datepicker"
                                     type="datetime">
                                     <granite:data
                                         jcr:primaryType="nt:unstructured"
+                                        cascadeRequiredFrom="./jcr:content/metadata/lbg:status"
+                                        cascadeRequiredValueSet="Withdrawn"
                                         cascadeVisibilityFrom="./jcr:content/metadata/lbg:status"
                                         cascadeVisibilityValueSet="Withdrawn"
-                                        cq-msm-lockable="./metadata/lbg:withdrawalDate1"
+                                        cq-msm-lockable="./metadata/lbg:withdrawalDate"
                                         metaType="datepicker"
-                                        requiredCascading="always"
+                                        requiredCascading="ruleBased"
                                         typeHint="Date"
                                         visibilityCascading="ruleBased"/>
                                 </_x0031_602831869987>
@@ -2610,14 +2618,14 @@
                                     sling:resourceType="dam/gui/components/admin/schemafield"
                                     emptyText="Select Option"
                                     fieldLabel="Withdrawal Reason"
-                                    name="./jcr:content/metadata/lbg:withdrawalReason1"
+                                    name="./jcr:content/metadata/lbg:withdrawalReason"
                                     resourceType="dam/gui/coral/components/admin/schemaforms/formbuilder/formfields/v2/metadataselect">
                                     <granite:data
                                         jcr:primaryType="nt:unstructured"
                                         cascadeVisibilityFrom="./jcr:content/metadata/lbg:status"
                                         cascadeVisibilityValueSet="Withdrawn"
                                         choicesCascading="default"
-                                        cq-msm-lockable="./metadata/lbg:withdrawalReason1"
+                                        cq-msm-lockable="./metadata/lbg:withdrawalReason"
                                         metaType="dropdown"
                                         requiredCascading="default"
                                         visibilityCascading="ruleBased"/>
@@ -2683,7 +2691,7 @@
                             granite:rel="aem-assets-metadata-form-column"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="granite/ui/components/coral/foundation/container"
-                            listOrder="3"
+                            listOrder="2"
                             oice-options="on">
                             <items jcr:primaryType="nt:unstructured">
                                 <_x0031_602768691529
@@ -2704,12 +2712,14 @@
                                     resourceType="dam/gui/coral/components/admin/schemaforms/formbuilder/formfields/v2/metadataselect">
                                     <granite:data
                                         jcr:primaryType="nt:unstructured"
+                                        cascadeRequiredFrom="./jcr:content/metadata/lbg:assetType"
+                                        cascadeRequiredValueSet="Image"
                                         cascadeVisibilityFrom="./jcr:content/metadata/lbg:assetType"
                                         cascadeVisibilityValueSet="Image"
                                         choicesCascading="default"
                                         cq-msm-lockable="./metadata/lbg:imageType"
                                         metaType="dropdown"
-                                        requiredCascading="always"
+                                        requiredCascading="ruleBased"
                                         visibilityCascading="ruleBased"/>
                                     <items jcr:primaryType="nt:unstructured">
                                         <_x0031_602827895141
@@ -2742,12 +2752,14 @@
                                     resourceType="dam/gui/coral/components/admin/schemaforms/formbuilder/formfields/v2/metadataselect">
                                     <granite:data
                                         jcr:primaryType="nt:unstructured"
+                                        cascadeRequiredFrom="./jcr:content/metadata/lbg:assetType"
+                                        cascadeRequiredValueSet="Image"
                                         cascadeVisibilityFrom="./jcr:content/metadata/lbg:assetType"
                                         cascadeVisibilityValueSet="Image"
                                         choicesCascading="default"
                                         cq-msm-lockable="./metadata/lbg:imageLibrary"
                                         metaType="dropdown"
-                                        requiredCascading="always"
+                                        requiredCascading="ruleBased"
                                         visibilityCascading="ruleBased"/>
                                     <items jcr:primaryType="nt:unstructured">
                                         <_x0031_602827948934
@@ -2875,12 +2887,14 @@
                                     resourceType="dam/gui/coral/components/admin/schemaforms/formbuilder/formfields/v2/metadataselect">
                                     <granite:data
                                         jcr:primaryType="nt:unstructured"
+                                        cascadeRequiredFrom="./jcr:content/metadata/lbg:assetType"
+                                        cascadeRequiredValueSet="Logo"
                                         cascadeVisibilityFrom="./jcr:content/metadata/lbg:assetType"
                                         cascadeVisibilityValueSet="Logo"
                                         choicesCascading="default"
                                         cq-msm-lockable="./metadata/lbg:logoType"
                                         metaType="dropdown"
-                                        requiredCascading="always"
+                                        requiredCascading="ruleBased"
                                         visibilityCascading="ruleBased"/>
                                     <items jcr:primaryType="nt:unstructured">
                                         <_x0031_603089668916
@@ -2914,12 +2928,14 @@
                                     resourceType="dam/gui/coral/components/admin/schemaforms/formbuilder/formfields/v2/metadataselect">
                                     <granite:data
                                         jcr:primaryType="nt:unstructured"
+                                        cascadeRequiredFrom="./jcr:content/metadata/lbg:assetType"
+                                        cascadeRequiredValueSet="Template"
                                         cascadeVisibilityFrom="./jcr:content/metadata/lbg:assetType"
                                         cascadeVisibilityValueSet="Template"
                                         choicesCascading="default"
                                         cq-msm-lockable="./metadata/lbg:channelCategory"
                                         metaType="dropdown"
-                                        requiredCascading="always"
+                                        requiredCascading="ruleBased"
                                         visibilityCascading="ruleBased"/>
                                     <items jcr:primaryType="nt:unstructured">
                                         <_x0031_602853509384
@@ -3049,12 +3065,14 @@
                                     resourceType="dam/gui/coral/components/admin/schemaforms/formbuilder/formfields/v2/metadataselect">
                                     <granite:data
                                         jcr:primaryType="nt:unstructured"
+                                        cascadeRequiredFrom="./jcr:content/metadata/lbg:assetType"
+                                        cascadeRequiredValueSet="Design File"
                                         cascadeVisibilityFrom="./jcr:content/metadata/lbg:assetType"
                                         cascadeVisibilityValueSet="Design File"
                                         choicesCascading="default"
                                         cq-msm-lockable="./metadata/lbg:designFileType"
                                         metaType="dropdown"
-                                        requiredCascading="always"
+                                        requiredCascading="ruleBased"
                                         visibilityCascading="ruleBased"/>
                                     <items jcr:primaryType="nt:unstructured">
                                         <_x0031_602823665812
@@ -3159,11 +3177,13 @@
                                     resourceType="granite/ui/components/coral/foundation/form/numberfield">
                                     <granite:data
                                         jcr:primaryType="nt:unstructured"
+                                        cascadeRequiredFrom="./jcr:content/metadata/lbg:assetType"
+                                        cascadeRequiredValueSet="Design File"
                                         cascadeVisibilityFrom="./jcr:content/metadata/lbg:assetType"
                                         cascadeVisibilityValueSet="Design File"
                                         cq-msm-lockable="./metadata/lbg:jobNumber"
                                         metaType="number"
-                                        requiredCascading="always"
+                                        requiredCascading="ruleBased"
                                         visibilityCascading="ruleBased"/>
                                 </_x0031_602822903731>
                                 <_x0031_602822886695
@@ -3175,11 +3195,13 @@
                                     resourceType="granite/ui/components/coral/foundation/form/numberfield">
                                     <granite:data
                                         jcr:primaryType="nt:unstructured"
+                                        cascadeRequiredFrom="./jcr:content/metadata/lbg:assetType"
+                                        cascadeRequiredValueSet="Design File"
                                         cascadeVisibilityFrom="./jcr:content/metadata/lbg:assetType"
                                         cascadeVisibilityValueSet="Design File"
                                         cq-msm-lockable="./metadata/lbg:stockCode"
                                         metaType="number"
-                                        requiredCascading="always"
+                                        requiredCascading="ruleBased"
                                         visibilityCascading="ruleBased"/>
                                 </_x0031_602822886695>
                                 <_x0031_602822912610
@@ -3246,12 +3268,14 @@
                                     resourceType="dam/gui/coral/components/admin/schemaforms/formbuilder/formfields/v2/metadataselect">
                                     <granite:data
                                         jcr:primaryType="nt:unstructured"
+                                        cascadeRequiredFrom="./jcr:content/metadata/lbg:assetType"
+                                        cascadeRequiredValueSet="Media Asset"
                                         cascadeVisibilityFrom="./jcr:content/metadata/lbg:assetType"
                                         cascadeVisibilityValueSet="Media Asset"
                                         choicesCascading="default"
                                         cq-msm-lockable="./metadata/lbg:mediaFileType"
                                         metaType="dropdown"
-                                        requiredCascading="always"
+                                        requiredCascading="ruleBased"
                                         visibilityCascading="ruleBased"/>
                                     <items jcr:primaryType="nt:unstructured">
                                         <_x0031_602828168909
