@@ -54,7 +54,6 @@
                     <packageType>mixed</packageType>
                     <properties>
                         <installhook.actool.class>biz.netcentric.cq.tools.actool.installhook.AcToolInstallHook</installhook.actool.class>
-                        <cloudManagerTarget>none</cloudManagerTarget>
                     </properties>
                     <dependencies>
                         <dependency>
