@@ -1874,6 +1874,15 @@
                             sling:resourceType="granite/ui/components/coral/foundation/container"
                             listOrder="0">
                             <items jcr:primaryType="nt:unstructured">
+                                <_x0031_603777938793
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="dam/gui/components/admin/schemafield"
+                                    fieldLabel="Asset Information"
+                                    resourceType="dam/gui/coral/components/admin/schemaforms/formbuilder/sectionfield">
+                                    <granite:data
+                                        jcr:primaryType="nt:unstructured"
+                                        metaType="section"/>
+                                </_x0031_603777938793>
                                 <_x0031_602672290449
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="dam/gui/components/admin/schemafield"
@@ -2992,14 +3001,14 @@
                                     sling:resourceType="dam/gui/components/admin/schemafield"
                                     displayedFormat="YYYY-MM-DD HH:mm"
                                     fieldLabel="Withdrawal Date"
-                                    name="./jcr:content/metadata/lbg:withdrawalDate"
+                                    name="./jcr:content/metadata/lbg:templateWithdrawalDate"
                                     resourceType="granite/ui/components/coral/foundation/form/datepicker"
                                     type="datetime">
                                     <granite:data
                                         jcr:primaryType="nt:unstructured"
                                         cascadeVisibilityFrom="./jcr:content/metadata/lbg:assetType"
                                         cascadeVisibilityValueSet="Template"
-                                        cq-msm-lockable="./metadata/lbg:withdrawalDate"
+                                        cq-msm-lockable="./metadata/lbg:templateWithdrawalDate"
                                         metaType="datepicker"
                                         requiredCascading="default"
                                         typeHint="Date"
@@ -3010,14 +3019,14 @@
                                     sling:resourceType="dam/gui/components/admin/schemafield"
                                     emptyText="Select Option"
                                     fieldLabel="Withdrawal Reason"
-                                    name="./jcr:content/metadata/lbg:withdrawalReason"
+                                    name="./jcr:content/metadata/lbg:templateWithdrawalReason"
                                     resourceType="dam/gui/coral/components/admin/schemaforms/formbuilder/formfields/v2/metadataselect">
                                     <granite:data
                                         jcr:primaryType="nt:unstructured"
                                         cascadeVisibilityFrom="./jcr:content/metadata/lbg:assetType"
                                         cascadeVisibilityValueSet="Template"
                                         choicesCascading="default"
-                                        cq-msm-lockable="./metadata/lbg:withdrawalReason"
+                                        cq-msm-lockable="./metadata/lbg:templateWithdrawalReason"
                                         metaType="dropdown"
                                         requiredCascading="default"
                                         visibilityCascading="ruleBased"/>
