@@ -1,0 +1,216 @@
+- DEF groupPath="/home/groups/lloyds"
+- DEF parents=[bank-of-scotland,black-horse,halifax,lex-autolease,lloyds-bank,lloyds-banking-group,mbna,other-brands,schroders,scottish-widows]
+
+- group_config:
+
+    - admin-group:
+
+        - name: 'Admin Group'
+          isMemberOf: internal-group,internal-agency,media-agency
+          path: ${groupPath}
+
+    - internal-agency:
+
+        - name: 'Internal Agency'
+          isMemberOf: internal-group
+          path: ${groupPath}
+
+    - media-agency:
+
+        - name: 'Media Agency'
+          isMemberOf: internal-group
+          path: ${groupPath}
+
+    - brand-agency:
+
+        - name: 'Brand Agency'
+          isMemberOf: internal-group
+          path: ${groupPath}
+
+    - cco:
+
+        - name: 'CCO'
+          isMemberOf: internal-group
+          path: ${groupPath}
+
+    - lbg:
+
+        - name: 'LBG'
+          isMemberOf: internal-group
+          path: ${groupPath}
+
+    - external-agencies:
+
+        - name: 'External Agencies'
+          isMemberOf: internal-group
+          path: ${groupPath}
+
+    - sensitive-access:
+
+        - name: 'Sensitive Access'
+          isMemberOf: internal-group
+          path: ${groupPath}
+
+    - internal-group:
+
+        - name: 'LLOYDS Internal Group'
+          isMemberOf: contributor, workflow-users
+          path: ${groupPath}
+
+- ace_config:
+
+    - internal-group:
+
+        - path: /content/dam/lloydsassets
+          permission: deny
+          actions: read, modify, create , delete, replicate
+          repGlob: /*
+
+        - path: /conf/global/settings/dam/adminui-extension/metadataschema
+          permission: allow
+          actions: read
+
+        - FOR parent IN ${parents}:
+
+            - path: /content/dam/lloydsassets/${parent}
+              permission: allow
+              privileges: jcr:read
+              repGlob: ''
+
+    - admin-group:
+
+        - FOR parent IN ${parents}:
+
+            - path: /content/dam/lloydsassets/${parent}/final-executions/approved
+              permission: allow
+              actions: read,create,modify
+
+    - internal-agency:
+
+        - path: /content/dam/lloydsassets/hhg-uncategorised
+          permission: allow
+          actions: read,create,modify
+
+        - path: /content/dam/lloydsassets/mediabin-uncategorised
+          permission: allow
+          actions: read,create,modify
+
+        - FOR parent IN ${parents}:
+
+            - path: /content/dam/lloydsassets/${parent}/assets
+              permission: allow
+              privileges: jcr:read
+              repGlob: ''
+
+            - path: /content/dam/lloydsassets/${parent}/assets
+              permission: allow
+              actions: read, modify, create
+              repGlob: /*
+
+            - path: /content/dam/lloydsassets/${parent}/assets/media-files
+              permission: deny
+              actions: create,modify
+
+            - path: /content/dam/lloydsassets/${parent}/final-executions
+              permission: allow
+              privileges: jcr:read
+              repGlob: ''
+
+            - path: /content/dam/lloydsassets/${parent}/final-executions/production-ready
+              permission: allow
+              actions: read,create,modify
+
+            - path: /content/dam/lloydsassets/${parent}/final-executions/work-in-progress
+              permission: allow
+              actions: read,create,modify
+
+    - media-agency:
+
+        - FOR parent IN ${parents}:
+
+            - path: /content/dam/lloydsassets/${parent}/assets
+              permission: allow
+              privileges: jcr:read
+              repGlob: ''
+
+            - path: /content/dam/lloydsassets/${parent}/assets/media-files
+              permission: allow
+              actions: read,create,modify
+
+    - brand-agency:
+
+        - FOR parent IN ${parents}:
+
+            - path: /content/dam/lloydsassets/${parent}/assets
+              permission: allow
+              privileges: jcr:read
+              repGlob: ''
+
+            - path: /content/dam/lloydsassets/${parent}/assets/brand-guidelines
+              permission: allow
+              actions: read,create,modify
+
+    - cco:
+
+        - FOR parent IN ${parents}:
+
+            - path: /content/dam/lloydsassets/${parent}/assets
+              permission: allow
+              actions: read
+
+            - path: /content/dam/lloydsassets/${parent}/final-executions
+              permission: allow
+              actions: read
+
+            - path: /content/dam/lloydsassets/${parent}/assets/design-files
+              permission: deny
+              actions: read
+
+            - path: /content/dam/lloydsassets/${parent}/assets/fonts
+              permission: deny
+              actions: read
+
+    - lbg:
+
+        - FOR parent IN ${parents}:
+
+            - path: /content/dam/lloydsassets/${parent}/assets
+              permission: allow
+              actions: read
+
+            - path: /content/dam/lloydsassets/${parent}/assets/design-files
+              permission: deny
+              actions: read
+
+            - path: /content/dam/lloydsassets/${parent}/assets/fonts
+              permission: deny
+              actions: read
+
+    - external-agencies:
+
+        - FOR parent IN ${parents}:
+
+            - path: /content/dam/lloydsassets/${parent}/assets
+              permission: allow
+              actions: read
+
+            - path: /content/dam/lloydsassets/${parent}/assets/design-files
+              permission: deny
+              actions: read
+
+            - path: /content/dam/lloydsassets/${parent}/assets/fonts
+              permission: deny
+              actions: read
+
+    - sensitive-access:
+
+        - FOR parent IN ${parents}:
+
+            - path: /content/dam/lloydsassets/${parent}/assets
+              permission: allow
+              privileges: jcr:read
+              repGlob: ''
+
+            - path: /content/dam/lloydsassets/${parent}/assets/signatures
+              permission: allow
+              actions: read,create,modify

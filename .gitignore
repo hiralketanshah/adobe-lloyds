@@ -1,6 +1,6 @@
 # Created by https://www.gitignore.io/api/eclipse,java,maven
 
-### Eclipse ###
+### Eclipse ###  
 *.pydevproject
 .metadata
 .gradle
@@ -68,9 +68,33 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 
+
 ### Vault ###
 .vlt
+
 
 ### IntelliJ ###
 .idea/
 *.iml
+
+
+### Node.js ###
+
+# Log files
+*.log
+
+# NPM
+node_modules/
+package-lock.json
+yarn.lock
+
+# Webpack
+build/
+dist/
+
+# Frontend Maven Plugin
+node/
+
+# Tests
+coverage/
+reports/
